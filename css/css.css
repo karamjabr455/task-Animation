@@ -68,19 +68,6 @@ body {
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
-    .gradient-text {
-        font-size: 4vw; 
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .gradient-text {
-        font-size: 4vw; 
-        text-align: center;
-    }
-}
 
 /* nav bar............................................................... */
 
@@ -189,14 +176,37 @@ body {
 }
 
 @media (max-width: 768px) {
-    .gradient-text {
-        font-size: 48px; 
+    .text {
+        font-size:20px; 
+        display: flex;
     }
+  
     .description {
-        font-size: 16px; 
+        font-size: 10px; 
+        display: flex;
     }
     .social-icons a {
-        margin: 0 5px; 
+        font-size: 16px; 
+        width: 24px; 
+        height: 24px; 
+        display: inline-block; 
+        text-align: center; 
+        line-height: 24px; 
+    }
+    .social-icons a img {
+        width: 100%; 
+        height: auto; 
+    }
+}
+
+@media (min-width: 600px){
+    .text {
+        font-size:30px; 
+        display: flex;
+    }
+    .description {
+        font-size: 18px; 
+        display: flex;
     }
 }
 
@@ -229,8 +239,8 @@ body {
 
 .half-circle-images img {
     position: absolute;
-    width: 10vw;
-    height: auto;
+    width: 100%; 
+    height: auto; 
     max-width: 100px;
     opacity: 0;
     transform: translateX(-100%);
@@ -300,16 +310,17 @@ body {
     transform: translateX(50%) rotate(-20deg);
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
+/* For mobile phone screens*/
+@media only screen and (max-width: 600px) {
     .half-circle-images img {
-        width: 15vw;
+        max-width: 50px; 
     }
 }
 
-@media (max-width: 480px) {
+/*Patterns for iPad screens*/
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
     .half-circle-images img {
-        width: 20vw;
+        max-width: 75px; 
     }
 }
 
@@ -318,9 +329,9 @@ body {
     text-align: left;
     padding: 50px 20px;
     display: flex;
-    flex-wrap: wrap;
+  
     align-items: flex-start;
-    margin-left: 15vw; 
+    margin-left: 9vw; 
 }
 
 .tech-stack-title {
@@ -330,9 +341,9 @@ body {
 
 .stack-items {
     display: flex;
-    flex-wrap: wrap;
+  
     margin-left: 150px;
-    margin-top: -100px;
+    margin-top: -20px;
 }
 
 .stack-item {
@@ -340,8 +351,8 @@ body {
     flex-wrap: wrap;
     margin-left: 150px;
     margin-top: -100px;
-    width: 5vw;
-    max-width: 100px; 
+    width: 10vw;
+    max-width: 500px; 
     height: 10vw;
     max-height: 100px;
     margin: 50px; 
@@ -350,8 +361,10 @@ body {
 }
 
 .stack-item img {
+    
     max-width: 50%;
     max-height: 50%;
+    display: flex;
 }
 
 /* Falling animation */
@@ -381,13 +394,59 @@ body {
         height: 35vw;
     }
     
-    .half-circle-images img {
-        width: 15vw;
+   
+    
+  
+}
+@media only screen and (max-width: 600px) {
+    .stack-item {
+        margin:1px; 
+        width: 1vw; 
+        height: 1vw;
+        display:flex;
+    }
+    
+    .stack-item img {
+        width:25px; 
+        height:25px;
+    }
+    
+    .tech-stack {
+        padding: 20px 10px;
+        margin-left: 0;
+    }
+    
+    .stack-items {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .tech-stack-title {
+        font-size: 1em;
+        text-align: left;
+    }
+    
+    .tech-stack-title {
+        font-size: 1em; 
+    }
+    
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .stack-item img {
+        width: 8vw; 
+        height: 8vw;
     }
     
     .stack-item {
-        width: 12vw;
-        height: 12vw;
+        margin:1px; 
+        width: 1vw; 
+        height: 1vw; 
+        display:flex;
+    }
+    
+    .tech-stack-title {
+        font-size: 1.75em; 
     }
 }
 
@@ -395,6 +454,8 @@ body {
     .profile-img {
         width: 40vw;
         height: 40vw;
+        
+       
     }
     
     .half-circle-images img {
@@ -404,6 +465,53 @@ body {
     .stack-item {
         width: 15vw;
         height: 15vw;
+    }
+}
+/* Patterns for mobile screens */
+@media only screen and (max-width: 600px) {
+    .custom-title {
+        font-size: 1.5em;
+    }
+
+    .containerr p {
+        font-size: 1em; 
+    }
+
+    .custom-text p {
+        font-size: 0.9em; 
+    }
+
+    .full-width {
+        width: 100%; 
+        height: auto;
+    }
+
+    .row {
+        margin-top: 20px;
+    }
+}
+
+/* Styles for iPad screens */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .custom-title {
+        font-size: 1.75em; 
+    }
+
+    .containerr p {
+        font-size: 1.1em; 
+    }
+
+    .custom-text p {
+        font-size: 1em; 
+    }
+
+    .full-width {
+        width: 100%; 
+        height: auto;
+    }
+
+    .row {
+        margin-top: 20px;
     }
 }
 /* About Me........................................... */
@@ -459,6 +567,28 @@ h2{
     color: #1572B6;
     font-weight: bold;
   
+}
+@media only screen and (max-width: 600px) {
+    .container {
+        margin-right: 0;
+        margin-top: 2vw;
+    }
+
+    .text-md-right {
+        text-align: center !important;
+    }
+
+    h2, h3 {
+        font-size: 1.5em; 
+    }
+
+    p {
+        font-size: 1em; 
+    }
+
+    .row {
+        margin-top: 20px
+    }
 }
 
 /*contact ..........................................................*/
